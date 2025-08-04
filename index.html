@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sneha 🎂 (From Bachuu 💖)</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #ff99cc, #ffe6f0, #ffb3d9, #ffd9ec);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 0 20px #ff69b4;
+  animation: glow 2s ease-in-out infinite, sway 6s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% {text-shadow: 0 0 20px #ff69b4;}
+  50% {text-shadow: 0 0 30px #ff1493;}
+}
+@keyframes sway {
+  0%, 100% {transform: translateX(0);}
+  50% {transform: translateX(10px);}
+}
+.message-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.gallery img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+}
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: floatUp 10s linear infinite;
+}
+@keyframes floatUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-120vh);}
+}
+#surpriseBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: hotpink;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+  z-index: 999;
+}
+#surpriseBtn:hover {
+  background: deeppink;
+}
+#modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center; align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+}
+.modal-content h2 {
+  color: hotpink;
+}
+</style>
+</head>
+<body>
+
+<h1>🎉 Happy Birthday Sneha 🎂 (From Bachuu 💖) 🎉</h1>
+
+<div class="message-card">
+<p>💖 1. Happy Birthday my Sneha, my world, my everything!</p>
+<p>🎂 2. Today is all about you, the queen of my heart.</p>
+<p>😍 3. You make my heart skip beats every single day.</p>
+<p>😂 4. You’re the only one who can make me laugh like crazy and blush at the same time.</p>
+<p>🌸 5. Your smile is my favorite sunshine.</p>
+<p>💌 6. If kisses were stars, I’d give you the entire galaxy tonight.</p>
+<p>🎶 7. You are my favorite song, playing on repeat forever.</p>
+<p>💍 8. I don’t need a magic lamp, I already have my wish come true — YOU!</p>
+<p>🍫 9. You’re sweeter than all the chocolates in the world.</p>
+<p>🦋 10. Every moment with you feels like a fairytale.</p>
+<p>🔥 11. Even the candles on your cake are jealous of how brightly you shine.</p>
+<p>🎁 12. You are my best gift from life, and I’ll never stop unwrapping your love.</p>
+<p>😂 13. You’re the only person I’d share my fries with (and that’s saying a lot).</p>
+<p>🌙 14. You’re my moonlight on dark nights and my laughter on bad days.</p>
+<p>💃 15. Dancing through life is better when it’s with you.</p>
+<p>🥰 16. You’re the reason I believe in love stories.</p>
+<p>🍕 17. If you were a pizza, you’d be my favorite extra cheesy one.</p>
+<p>💎 18. You’re more precious than any diamond in the world.</p>
+<p>🎡 19. Life with you is my favorite adventure.</p>
+<p>🌈 20. You bring colors to my world I never knew existed.</p>
+<p>😂 21. Even your stubbornness is adorable… most of the time 😜.</p>
+<p>🌹 22. I’d choose you in every lifetime, without hesitation.</p>
+<p>💞 23. You’re my best friend, my partner, and my forever love.</p>
+<p>🎇 24. Here’s to many more birthdays, memories, and crazy moments together!</p>
+<p>❤️ 25. Forever yours, Bachuu 💖</p>
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<button id="surpriseBtn">🎁 Click for Surprise</button>
+
+<div id="modal">
+  <div class="modal-content">
+    <h2>Happy Birthday Sneha 💖</h2>
+    <p>From your Bachuu, wishing you love, laughter, and happiness forever 🎂🎉</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+function createBalloon() {
+  const balloon = document.createElement('div');
+  balloon.classList.add('balloon');
+  const colors = ['#ff4d6d', '#ffcc70', '#8ecae6', '#ff99c8'];
+  balloon.style.background = colors[Math.floor(Math.random()*colors.length)];
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.animationDuration = (8 + Math.random()*4) + 's';
+  document.body.appendChild(balloon);
+  balloon.addEventListener('click', () => {
+    balloon.remove();
+    launchConfetti();
+  });
+  setTimeout(() => balloon.remove(), 12000);
+}
+setInterval(createBalloon, 800);
+
+function launchConfetti() { console.log("Confetti triggered!"); }
+const modal = document.getElementById('modal');
+function showModal() { modal.style.display = 'flex'; launchConfetti(); }
+function closeModal() { modal.style.display = 'none'; }
+document.getElementById('surpriseBtn').addEventListener('click', showModal);
+setTimeout(showModal, 3000);
+
+const gallery = document.getElementById('gallery');
+let imageIndex = 1;
+function loadImages() {
+  for (let i=0; i<5; i++) {
+    const img = document.createElement('img');
+    img.src = `images/img${imageIndex}.jpg`;
+    img.onload = () => img.classList.add('visible');
+    gallery.appendChild(img);
+    imageIndex++;
+  }
+}
+window.addEventListener('scroll', () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+    loadImages();
+  }
+});
+loadImages();
+</script>
+
+</body>
+</html>
